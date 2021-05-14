@@ -120,7 +120,7 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hPrevInst,
         case 's':
           /* start screen saver */
           return LaunchScreenSaver(NULL);
-          
+
         case 'P':
         case 'p':
           {
@@ -156,7 +156,7 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hPrevInst,
         case '-':
         case '/':
         case ' ':
-        default: 
+        default:
 	  break;
         }
     }
@@ -290,7 +290,7 @@ static LRESULT WINAPI SysScreenSaverProc(HWND hWnd, UINT msg,
   return ScreenSaverProc(hWnd, msg, wParam, lParam);
 }
 
-LONG WINAPI DefScreenSaverProc(HWND hWnd, UINT msg,
+LRESULT WINAPI DefScreenSaverProc(HWND hWnd, UINT msg,
                                WPARAM wParam, LPARAM lParam)
 {
   /* don't do any special processing when in preview mode */
@@ -305,9 +305,9 @@ LONG WINAPI DefScreenSaverProc(HWND hWnd, UINT msg,
          an invalid password was given.
        */
       return 0;
-    case SCRM_VERIFYPW: 
+    case SCRM_VERIFYPW:
       /* verify password or return TRUE if password checking is turned off */
-      if (VerifyScreenSavePwd) 
+      if (VerifyScreenSavePwd)
         return VerifyScreenSavePwd(hWnd);
       else
         return TRUE;
@@ -373,9 +373,9 @@ static void TerminateScreenSaver(HWND hWnd)
 static BOOL RegisterClasses(void)
 {
   WNDCLASS cls;
-  
-  cls.hCursor = NULL; 
-  cls.hIcon = LoadIcon(hMainInstance, MAKEINTATOM(ID_APP)); 
+
+  cls.hCursor = NULL;
+  cls.hIcon = LoadIcon(hMainInstance, MAKEINTATOM(ID_APP));
   cls.lpszMenuName = NULL;
   cls.lpszClassName = CLASS_SCRNSAVE;
   cls.hbrBackground = GetStockObject(BLACK_BRUSH);
@@ -384,7 +384,7 @@ static BOOL RegisterClasses(void)
   cls.lpfnWndProc = (WNDPROC) SysScreenSaverProc;
   cls.cbWndExtra = 0;
   cls.cbClsExtra = 0;
-  
+
   if (!RegisterClass(&cls))
     return FALSE;
 
@@ -395,7 +395,7 @@ void WINAPI ScreenSaverChangePassword(HWND hParent)
 {
   /* load Master Password Router (MPR) */
   HINSTANCE hMpr = LoadLibrary(TEXT("MPR.DLL"));
-  
+
   if (hMpr)
     {
       CHPWDPROC ChangePassword;
