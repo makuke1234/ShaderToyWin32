@@ -21,4 +21,4 @@ There are some shaders to "play" with in the subfolder [testingshaders](https://
 
 # License
 
-The project uses the MIT license.
+This project uses the MIT license.
