@@ -1,12 +1,15 @@
 # ShaderToyWin32
-![Release version](https://img.shields.io/badge/release-v1.0.0-green.svg)
+
+[![Release version](https://img.shields.io/github/v/release/makuke1234/ShaderToyWin32?display_name=release&include_prereleases)](https://github.com/makuke1234/ShaderToyWin32/releases/latest)
+[![Total downloads](https://img.shields.io/github/downloads/makuke1234/ShaderToyWin32/total)](https://github.com/makuke1234/ShaderToyWin32/releases)
+![C version](https://img.shields.io/badge/version-C99-blue.svg)
 
 An OpenGL toy screen saver to test fragment shaders. Everything has been written in pure C, only Win32 API has been utilised to make it work. All OpenGL functions that must be linked, are linked at runtime, thus no OpenGL library is needed.
 
 
 # Get started
 
-To try it out download the 32-bit version of the screen saver from [here](https://github.com/makuke1234/ShaderToyWin32/raw/main/ShaderScreenSaver_gl.scr) or 64-bit version from [here](https://github.com/makuke1234/ShaderToyWin32/raw/main/ShaderScreenSaver_gl64.scr) and the testing fragment shader for it from [here](https://raw.githubusercontent.com/makuke1234/ShaderToyWin32/main/shader.glsl).
+To try it out download the screen saver from [here](https://github.com/makuke1234/ShaderToyWin32/releases). Both 32-bit and 64-bit Windows binaries are provided.
 
 You can use any shader for it as long as the name of the shader file is `shader.glsl`.
 
@@ -18,4 +21,4 @@ There are some shaders to "play" with in the subfolder [testingshaders](https://
 
 # License
 
-As stated, the project uses MIT License.
+The project uses the MIT license.
