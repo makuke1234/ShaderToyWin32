@@ -3,6 +3,7 @@
 [![Release version](https://img.shields.io/github/v/release/makuke1234/ShaderToyWin32?display_name=release&include_prereleases)](https://github.com/makuke1234/ShaderToyWin32/releases/latest)
 [![Total downloads](https://img.shields.io/github/downloads/makuke1234/ShaderToyWin32/total)](https://github.com/makuke1234/ShaderToyWin32/releases)
 ![C version](https://img.shields.io/badge/version-C99-blue.svg)
+[![wakatime](https://wakatime.com/badge/github/makuke1234/ShaderToyWin32.svg)](https://wakatime.com/badge/github/makuke1234/ShaderToyWin32)
 
 An OpenGL toy screen saver to test fragment shaders. Everything has been written in pure C, only Win32 API has been utilised to make it work. All OpenGL functions that must be linked, are linked at runtime, thus no OpenGL library is needed.
 
